@@ -7,7 +7,11 @@ products:
       set: 2ed
   Unlimited Edition Booster Pack:
     pack:
-    - code: 2ed
+    - set: 2ed
+      code: default
   Unlimited Edition Starter Deck:
     pack:
-    - code: 2ed-starter
+    - set: 2ed
+      code: starter
+    other:
+    - name: Unlimited Edition Starter Deck Rulebook
