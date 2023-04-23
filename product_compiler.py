@@ -1,8 +1,11 @@
-
 import ijson
 from tqdm import tqdm
 import yaml
 from pathlib import Path
+
+alt_codes = {
+	"CON_": "con"
+}
 
 parentPath = Path("mtgJson/AllSetfiles/")
 files = parentPath.glob("*.json")
@@ -18,8 +21,12 @@ for file in t:
 	'''
 	output_file = Path("data/contents/").joinpath(file.with_suffix(".yaml").name)
 	if output_file.is_file():
-		with open(output_file, 'r') as file:
-			products = yaml.safe_load(file)
+		with open(output_file, 'r') as f:
+			full = yaml.safe_load(f)
+		try:
+			products = full["products"]
+		except:
+			products = full
 	else:
 		products = {}
 	with open(file, 'rb') as ifile:
@@ -27,8 +34,9 @@ for file in t:
 		for p in sealed_product:
 			if p["name"] not in products:
 				products[p["name"]] = []
+	code = alt_codes.get(file.stem.lower(), file.stem.lower())
 	with open(output_file, 'w') as write:
-		yaml.dump(products, write)
+		yaml.dump({"code": code, "products": products}, write)
 t.close
 del(t)
 
