@@ -2,10 +2,12 @@ import ijson
 from tqdm import tqdm
 import yaml
 from pathlib import Path
+import logging
 
 alt_codes = {
 	"CON_": "con"
 }
+logging.basicConfig(filename='product.log', encoding='utf-8', level=logging.INFO)
 
 parentPath = Path("mtgJson/AllSetfiles/")
 files = parentPath.glob("*.json")
@@ -33,6 +35,7 @@ for file in t:
 		sealed_product = list(ijson.items(ifile, "data.sealedProduct.item"))
 		for p in sealed_product:
 			if p["name"] not in products:
+				logging.info("Added new product %s/%s", file.stem, p["name"])
 				products[p["name"]] = []
 	code = alt_codes.get(file.stem.lower(), file.stem.lower())
 	with open(output_file, 'w') as write:

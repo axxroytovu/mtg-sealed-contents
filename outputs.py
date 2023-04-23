@@ -2,6 +2,9 @@ import yaml
 import json
 from tqdm import tqdm
 from pathlib import Path
+import logging
+
+logging.basicConfig(filename='output.log', encoding='utf-8', level=logging.INFO)
 
 contents_files = Path("data/contents/").glob("*.yaml")
 new_files = Path("data/products").glob("*.yaml")
@@ -16,6 +19,8 @@ for file in contents_files:
 			if data["code"] not in products_contents:
 				products_contents[data["code"]] = {}
 			products_contents[data["code"]][product] = contents
+		else:
+			logging.info("%s/%s missing contents", data["code"], product)
 
 with open("outputs/contents.json", "w") as outfile:
 	json.dump(products_contents, outfile)
