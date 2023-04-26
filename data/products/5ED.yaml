@@ -5,4 +5,4 @@ products:
     subtype: STARTER
     release_date: null
     purchase_url:
-      card_kingdom: "https://www.cardkingdom.com/mtg-sealed/5th-edition-two-player-starter-deck-display"
+      cardKingdom: "https://www.cardkingdom.com/mtg-sealed/5th-edition-two-player-starter-deck-display"
