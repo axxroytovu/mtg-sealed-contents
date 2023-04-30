@@ -33,10 +33,15 @@ for file in t:
 		products = {}
 	with open(file, 'rb') as ifile:
 		sealed_product = list(ijson.items(ifile, "data.sealedProduct.item"))
+		mtgjson_names = [p["name"] for p in sealed_product]
+		existing_names = [k for k in products.keys()]
 		for p in sealed_product:
 			if p["name"] not in products:
 				logging.info("Added new product %s/%s", file.stem, p["name"])
 				products[p["name"]] = []
+		for n in existing_names:
+		    if n not in mtgjson_names:
+		        logging.info("Product %s/%s no longer present in MTGJson data", file.stem, n)
 	code = alt_codes.get(file.stem.lower(), file.stem.lower())
 	with open(output_file, 'w') as write:
 		yaml.dump({"code": code, "products": products}, write)

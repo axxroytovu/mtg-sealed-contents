@@ -18,6 +18,8 @@ for file in contents_files:
 		if contents:
 			if data["code"] not in products_contents:
 				products_contents[data["code"]] = {}
+			if "size" not in contents:
+			    logging.info("%s/%s missing product size", data["code"], product)
 			products_contents[data["code"]][product] = contents
 		else:
 			logging.info("%s/%s missing contents", data["code"], product)
