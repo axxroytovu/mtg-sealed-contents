@@ -1,19 +1,117 @@
 code: bro
 products:
   Land Station 2022: []
-  The Brothers War Bundle: []
-  The Brothers War Bundle Case: []
-  The Brothers War Collector Booster Display: []
-  The Brothers War Collector Booster Display Case: []
-  The Brothers War Collector Booster Pack: []
-  The Brothers War Draft Booster Box: []
-  The Brothers War Draft Booster Box Case: []
-  The Brothers War Draft Booster Pack: []
-  The Brothers War Gift Bundle: []
-  The Brothers War Jumpstart Booster Display: []
+  The Brothers War Bundle:
+    sealed:
+    - set: bro
+      name: The Brothers War Set Booster Pack
+      count: 8
+    other:
+    - name: The Brothers War Bundle Land Pack
+    - name: The Brothers War Spindown Die
+    card:
+    - set: bro
+      number: 379
+      name: Queen Kayla bin-Kroog
+      foil: true
+    size: 9
+  The Brothers War Bundle Case:
+    sealed:
+    - set: bro
+      name: The Brothers War Bundle
+      count: 6
+    size: 6
+  The Brothers War Collector Booster Display:
+    sealed:
+    - set: bro
+      name: The Brothers War Collector Booster Pack
+      count: 12
+    size: 12
+  The Brothers War Collector Booster Display Case:
+    sealed:
+    - set: bro
+      name: The Brothers War Collector Booster Display
+      count: 6
+    size: 6
+  The Brothers War Collector Booster Pack:
+    pack:
+    - set: bro
+      code: collector
+    size: 15
+  The Brothers War Draft Booster Box:
+    sealed:
+    - set: bro
+      name: The Brothers War Draft Booster Pack
+      count: 36
+    size: 36
+  The Brothers War Draft Booster Box Case:
+    sealed:
+    - set: bro
+      name: The Brothers War Draft Booster Box
+      count: 6
+    size: 6
+  The Brothers War Draft Booster Pack:
+    pack:
+    - set: bro
+      code: default
+    size: 15
+  The Brothers War Gift Bundle:
+    sealed:
+    - set: bro
+      name: The Brothers War Collector Booster Pack
+      count: 1
+    - set: bro
+      name: The Brothers War Set Booster Pack
+      count: 8
+    other:
+    - name: The Brothers War Gift Bundle Land Pack
+    - name: Foil Mythic Rare Transformers Card
+    - name: The Brothers War Spindown Die
+    card:
+    - set: bro
+      number: 379
+      name: Queen Kayla bin-Kroog
+      foil: true
+    size: 9
+  The Brothers War Jumpstart Booster Display:
+    sealed:
+    - set: bro
+      name: The Brothers War Jumpstart Booster Pack
+      count: 18
+    size: 18
   The Brothers War Jumpstart Booster Pack: []
-  The Brothers War Prerelease Pack Mishras Burnished Banner: []
-  The Brothers War Prerelease Pack Urzas Iron Alliance: []
-  The Brothers War Set Booster Display: []
-  The Brothers War Set Booster Display Case: []
-  The Brothers War Set Booster Pack: []
+  The Brothers War Prerelease Pack Mishras Burnished Banner:
+    sealed:
+    - set: bro
+      name: The Brothers War Draft Booster Pack
+      count: 6
+    other:
+    - name: The Brothers War Prerelease Promo Card
+    - name: The Brothers War Spindown Die
+    size: 6
+  The Brothers War Prerelease Pack Urzas Iron Alliance:
+    sealed:
+    - set: bro
+      name: The Brothers War Draft Booster Pack
+      count: 6
+    other:
+    - name: The Brothers War Prerelease Promo Card
+    - name: The Brothers War Spindown Die
+    size: 6
+  The Brothers War Set Booster Display:
+    sealed:
+    - set: bro
+      name: The Brothers War Set Booster Pack
+      count: 30
+    size: 30
+  The Brothers War Set Booster Display Case:
+    sealed:
+    - set: bro
+      name: The Brothers War Set Booster Display
+      count: 6
+    size: 6
+  The Brothers War Set Booster Pack:
+    pack:
+    - set: bro
+      code: set
+    size: 12
